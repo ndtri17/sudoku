@@ -1,0 +1,91 @@
+* { 
+    font-family: monospace;
+    font-size: clamp(1rem, 1.5vh, 3rem);
+    overflow: hidden;
+}
+
+body { 
+    margin: 0;
+    padding: 0;
+}
+
+.header { 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.setup-game { 
+    display: flex;
+    flex-direction: column;
+}
+    
+h1 { 
+    font-size: 2em;
+}
+
+.levels, .time { 
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+input { 
+    margin-left: 1rem;
+    margin-right: 0.5rem;
+}
+
+button { 
+    margin: 26.56px 0;
+}
+
+#reset_btn { 
+    display: none;
+}
+
+.play-game { 
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.play-game span { 
+    margin: 26.56px 0;
+}
+
+.board { 
+    display: grid;
+    grid-template-columns: repeat(9, auto);
+    grid-template-rows: repeat(9, auto);
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+    margin: 1vh auto;
+    width: fit-content;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    border-left: 2px solid black;
+}
+
+.cell { 
+    display: flex;
+    width: clamp(20px, 3vw, 200px);
+    height: clamp(20px, 3vw, 200px);
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    border: 1px solid gray;
+}
+
+.cell:nth-child(3n) { 
+    border-right: 2px solid black;
+}
+
+.cell:nth-child(n+19):nth-child(-n+27),
+.cell:nth-child(n+46):nth-child(-n+54) { 
+    border-bottom: 2px solid black;
+}
